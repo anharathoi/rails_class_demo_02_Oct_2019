@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get '/messages', to: 'messages#index'
   post '/messages', to: 'messages#create'
 
+  get '/messages/thanks', to: 'messages#thank_you_page'
+  
   root 'messages#index'
 end

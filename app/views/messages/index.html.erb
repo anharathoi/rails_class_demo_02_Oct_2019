@@ -20,24 +20,3 @@
     <%= f.submit %>
   <% end %>
 </div>
-<br>
-<div>
-  <% if @messages.length !=0 %>
-    <h1>All Messages</h1>
-    <% @messages.each do |message| %>
-    <div>
-      From: <%= message.name %>
-    </div>
-    <div>
-      Email: <%= message.email %>
-    </div>
-    <div>
-      Message: <%= message.message_body %>
-    </div>
-    <br>
-    <% end %>
-  <% end %>
-</div>
-
-
-
