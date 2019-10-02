@@ -1,0 +1,43 @@
+<h1>Contact me</h1>
+
+<div class="contact-form">
+  <%= form_with model: @message do |f| %>
+  <div>
+    <%= f.label :name %>:<br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>:<br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :message_body %>: <br>
+    <%= f.text_area :message_body %>
+  </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>
+<br>
+<div>
+  <% if @messages.length !=0 %>
+    <h1>All Messages</h1>
+    <% @messages.each do |message| %>
+    <div>
+      From: <%= message.name %>
+    </div>
+    <div>
+      Email: <%= message.email %>
+    </div>
+    <div>
+      Message: <%= message.message_body %>
+    </div>
+    <br>
+    <% end %>
+  <% end %>
+</div>
+
+
+
